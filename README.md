@@ -11,7 +11,7 @@ The character used for each byte is a standard unicode character offset by 248.
 So if you have a byte value of 0, you select the unicode character 248 ("ø").
 
 For example, the [Wikidata favicon](https://upload.wikimedia.org/wikipedia/commons/e/e8/Wikidata-favicon.png)
-encodes to:
+ (101 bytes) encodes to:
 
 ```
 ƁňņĿąĂĒĂøøøąŁŀļŊøøøĈøøøĈĀþøøøėǫǷřøøøĤŁļĹŌŰǒśŘĐĖŘĞûƻŷŜĄĊīƖƑǮėżƹĂǊŞǶĿƹǠǪƛþƄĒĸčûžĮøøğźǟđǩĒąĤøøøøŁĽņļƦĺŘź
