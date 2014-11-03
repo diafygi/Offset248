@@ -58,18 +58,14 @@ print u"[1,3,3,7] => \"{}\", test={}".format(encoded, test == decoded)
 
 ```javascript
 function encode(input) {
-    var output = "";
-    for(var i = 0; i < input.length; i++) {
+    for(var i = 0, output = ""; i < input.length; i++)
         output += String.fromCharCode(input[i] + 248);
-    }
     return output;
 }
 
 function decode(input) {
-    var output = [];
-    for(var i = 0; i < input.length; i++){
+    for(var i = 0, output = []; i < input.length; i++)
         output.push(input.charCodeAt(i) - 248);
-    }
     return output;
 }
 
