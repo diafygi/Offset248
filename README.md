@@ -75,6 +75,29 @@ var decoded = decode(encoded);
 console.log("[1,3,3,7] => \"%s\", test=%s", encoded, test.toString() === decoded.toString());
 ```
 
+####Java
+
+```java
+public String encode(byte[] input) {
+	StringBuffer output = new StringBuffer(output.length);
+	for (int i = 0; i < input.length; ++i) {
+		int v248 = (char)(input[i]) + 248;
+		output.appendCodePoint(v248);
+	}
+	return output.toString();
+}
+
+public byte[] decode(String input) {
+	byte[] output = new byte[input.codePointCount(0, input.length())];
+	for(int cp, j = 0, i = 0; i < input.length(); i += Character.charCount(cp)) {
+		cp = input.codePointAt(i);
+		output[j++] = (byte)(cp - 248);
+	}
+	return result;
+}
+```
+
+
 **Pull Requests Wanted! Add an encoder and decoder for your favorite language**
 
 ###License
